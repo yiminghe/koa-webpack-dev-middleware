@@ -1,4 +1,4 @@
-# koa-webpack-dev
+# koa-webpack-dev-middleware
 
 webpack dev middleware for koa
 
@@ -9,7 +9,7 @@ same with https://github.com/webpack/webpack-dev-middleware
 
 ```js
 var app = require('koa')();
-var webpackMiddleware = require("koa-webpack-dev");
+var webpackMiddleware = require("koa-webpack-dev-middleware");
 app.use(webpackMiddleware(...));
 ```
 
