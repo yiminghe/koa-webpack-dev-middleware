@@ -1,6 +1,6 @@
 {
   "name": "koa-webpack-dev-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "webpack dev middleware for koa",
   "keywords": [
     "koa",
@@ -18,6 +18,6 @@
   },
   "licenses": "MIT",
   "dependencies": {
-    "webpack-dev-middleware": "1.x"
+    "webpack-dev-middleware": "1.2.x"
   }
 }
