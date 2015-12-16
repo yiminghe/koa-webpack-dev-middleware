@@ -1,6 +1,6 @@
 {
   "name": "koa-webpack-dev-middleware",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "webpack dev middleware for koa",
   "keywords": [
     "koa",
@@ -15,6 +15,9 @@
   },
   "bugs": {
     "url": "http://github.com/yiminghe/koa-webpack-dev-middleware/issues"
+  },
+  "scripts": {
+    "publish": "git push origin"
   },
   "licenses": "MIT",
   "dependencies": {
