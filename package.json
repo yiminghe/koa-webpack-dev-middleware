@@ -18,6 +18,6 @@
   },
   "licenses": "MIT",
   "dependencies": {
-    "webpack-dev-middleware": "1.2.x"
+    "webpack-dev-middleware": "1.4.x"
   }
 }
