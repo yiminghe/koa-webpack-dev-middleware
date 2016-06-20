@@ -16,9 +16,8 @@ function middleware(doIt, req, res) {
 
 module.exports = function (compiler, option) {
   var doIt = expressMiddleware(compiler, option);
-  return function*(next) {
-    var ctx = this;
-    var req = this.req;
+  return function(ctx, next) {
+    var req = ctx.req;
     var runNext = yield middleware(doIt, req, {
       end: function (content) {
         ctx.body = content;
@@ -28,7 +27,7 @@ module.exports = function (compiler, option) {
       }
     });
     if (runNext) {
-      yield *next;
+      next();
     }
   };
 };
