@@ -16,7 +16,7 @@ function middleware(doIt, req, res) {
 
 module.exports = function (compiler, option) {
   var doIt = expressMiddleware(compiler, option);
-  return function*(next) {
+  var wrapper = function*(next) {
     var ctx = this;
     ctx.webpack = doIt;
     var req = this.req;
@@ -32,4 +32,6 @@ module.exports = function (compiler, option) {
       yield *next;
     }
   };
+  wrapper.original = doIt;
+  return wrapper;
 };
