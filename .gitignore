@@ -27,3 +27,5 @@ dist
 assets/**/*.css
 examples/**/*.css
 build/
+lib/
+yarn.lock

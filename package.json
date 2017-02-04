@@ -1,12 +1,13 @@
 {
   "name": "koa-webpack-dev-middleware",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "webpack dev middleware for koa",
   "keywords": [
     "koa",
     "webpack",
     "middleware"
   ],
+  "main": "lib/index",
   "homepage": "http://github.com/yiminghe/koa-webpack-dev-middleware",
   "author": "yiminghe@gmail.com",
   "repository": {
@@ -20,10 +21,17 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "publish": "git push origin"
+    "compile": "babel src --out-dir lib",
+    "pub": "npm run compile && npm publish && git push origin"
+  },
+  "babel": {
+    "presets": [
+      "es2015-native-generators"
+    ]
   },
   "licenses": "MIT",
-  "dependencies": {
-    "webpack-dev-middleware": "^1.8.4"
+  "devDependencies": {
+    "babel-cli": "^6.0.0",
+    "babel-preset-es2015-native-generators": "^6.6.0"
   }
 }
