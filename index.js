@@ -16,7 +16,7 @@ function middleware(doIt, req, res) {
 
 module.exports = function (compiler, option) {
   var doIt = expressMiddleware(compiler, option);
-  return function*(next) {
+  var koaMiddleware = function*(next) {
     var ctx = this;
     ctx.webpack = doIt;
     var req = this.req;
@@ -32,4 +32,15 @@ module.exports = function (compiler, option) {
       yield *next;
     }
   };
+
+  var properties = [
+    'getFilenameFromUrl',
+    'waitUntilValid',
+    'invalidate',
+    'close',
+    'fileSystem'
+  ];
+  properties.map(propertyName => koaMiddleware[propertyName] = doIt[propertyName]);
+
+  return koaMiddleware;
 };
