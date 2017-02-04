@@ -1,6 +1,6 @@
 {
   "name": "koa-webpack-dev-middleware",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "webpack dev middleware for koa",
   "keywords": [
     "koa",
@@ -33,6 +33,9 @@
     ]
   },
   "licenses": "MIT",
+  "dependencies": {
+    "webpack-dev-middleware": "^1.10.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.0.0",
     "babel-preset-es2015-native-generators": "^6.6.0"
