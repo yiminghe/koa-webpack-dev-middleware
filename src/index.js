@@ -24,7 +24,7 @@ module.exports = (compiler, option) => {
     const { req } = ctx;
 
     ctx.webpack = doIt;
-    ctx.locals = ctx.locals || {};
+    ctx.locals = ctx.locals || ctx.state;
 
     const runNext = yield middleware(doIt, req, {
       end(content) {
