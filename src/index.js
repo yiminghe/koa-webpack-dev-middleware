@@ -24,11 +24,13 @@ module.exports = (compiler, option) => {
     const { req } = ctx;
 
     ctx.webpack = doIt;
+    ctx.locals = ctx.locals || {};
 
     const runNext = yield middleware(doIt, req, {
       end(content) {
         ctx.body = content;
       },
+      locals: ctx.locals,
       setHeader() {
         ctx.set.apply(ctx, arguments);
       }
