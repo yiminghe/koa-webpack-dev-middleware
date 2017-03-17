@@ -22,6 +22,7 @@ module.exports = (compiler, option) => {
   function* koaMiddleware(next) {
     const ctx = this;
     const { req } = ctx;
+    const locals = ctx.locals || ctx.state;
 
     ctx.webpack = doIt;
 
@@ -29,6 +30,7 @@ module.exports = (compiler, option) => {
       end(content) {
         ctx.body = content;
       },
+      locals,
       setHeader() {
         ctx.set.apply(ctx, arguments);
       }
