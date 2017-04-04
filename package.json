@@ -21,7 +21,7 @@
     "url": "http://github.com/yiminghe/koa-webpack-dev-middleware/issues"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=7.6.0"
   },
   "scripts": {
     "compile": "babel src --out-dir lib",
