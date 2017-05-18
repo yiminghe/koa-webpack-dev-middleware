@@ -33,7 +33,8 @@ module.exports = (compiler, option) => {
       locals,
       setHeader() {
         ctx.set.apply(ctx, arguments);
-      }
+      },
+      locals: ctx.state
     });
 
     if (runNext) {
