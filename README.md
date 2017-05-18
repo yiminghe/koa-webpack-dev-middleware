@@ -5,7 +5,7 @@ webpack dev middleware for koa
 [![node version][node-image]][node-url]
 
 
-[node-image]: https://img.shields.io/badge/node.js-%3E=_6.0.0-green.svg?style=flat-square
+[node-image]: https://img.shields.io/badge/node.js-%3E=_7.6.0-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 
 ## Usage
