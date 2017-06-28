@@ -1,6 +1,8 @@
 # koa-webpack-dev-middleware
 
-webpack dev middleware for koa
+webpack dev middleware for koa 1.x. 
+
+koa 2.x please try https://github.com/yiminghe/koa-webpack-dev-middleware/tree/2.x
 
 [![node version][node-image]][node-url]
 
