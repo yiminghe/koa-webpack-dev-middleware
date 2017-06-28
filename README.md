@@ -1,11 +1,10 @@
 # koa-webpack-dev-middleware
 
-webpack dev middleware for koa
+webpack dev middleware for koa 2.x
 
 [![node version][node-image]][node-url]
 
-
-[node-image]: https://img.shields.io/badge/node.js-%3E=_6.0.0-green.svg?style=flat-square
+[node-image]: https://img.shields.io/badge/node.js-%3E=_7.6.0-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 
 ## Usage
@@ -17,9 +16,7 @@ same with https://github.com/webpack/webpack-dev-middleware. will add original m
 var app = require('koa')();
 var webpackMiddleware = require("koa-webpack-dev-middleware");
 app.use(webpackMiddleware(...));
-app.get(function *() {
-  this.body = this.webpack.fileSystem.readFileSync('index.html');
-});
+
 ```
 
 ### Example usage
