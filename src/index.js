@@ -36,7 +36,7 @@ module.exports = (compiler, option) => {
     });
 
     if (runNext) {
-      await next;
+      await next();
     }
   }
 
