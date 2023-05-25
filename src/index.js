@@ -32,7 +32,10 @@ module.exports = (compiler, option) => {
       locals,
       setHeader() {
         ctx.set.apply(ctx, arguments);
-      }
+      },
+      getHeader() {
+        ctx.get.apply(ctx, arguments);
+      },
     });
 
     if (runNext) {

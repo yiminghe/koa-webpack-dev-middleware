@@ -27,7 +27,7 @@
     "pub": "npm publish && git push origin"
   },
   "licenses": "MIT",
-  "dependencies": {
-    "webpack-dev-middleware": "^1.10.0"
+  "peerDependencies": {
+    "webpack-dev-middleware": ">=1.10.0"
   }
 }
